@@ -1,1 +1,16 @@
-
+- name: myplay
+  gather_facts: false
+  hosts: all
+tasks:
+- name: Updates
+  apt:
+    update_cache: true
+- name: Install Nginx 
+  apt:
+     name: "{{package}}"
+     state: latest
+    #register: result
+ - name: Install Java_JDK
+   apt:
+     name: "{{JDK}}"
+     state: 
