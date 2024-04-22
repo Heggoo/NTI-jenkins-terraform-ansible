@@ -6,4 +6,8 @@ resource "aws_instance" "my_vm" {
    Name = var.name_tag,
  }
 }
+resource "local_file" "public_ip_file"{
+   filename = "ansible/inventory"
+   content = aws_instance.my_vm.public_ip
+}
 
