@@ -1,2 +1,2 @@
-Nginx = nginx
-JDK = 
+pack = nginx
+JDK = openjdk-17
