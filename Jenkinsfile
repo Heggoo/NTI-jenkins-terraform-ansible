@@ -13,7 +13,11 @@ pipeline{
         sh 'terraform apply --auto-approve' 
       }
     }
-
+    stage('Ansible Apply'){
+      steps{
+       sh 'ansible-playbook ansible/playbook.yml'
+      }
+    }
 
   }
   
