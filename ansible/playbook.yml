@@ -7,7 +7,7 @@ tasks:
     update_cache: true
 - name: Install Nginx 
   apt:
-     name: "{{Nginx}}"
+     name: "{{pack}}"
      state: latest
     #register: result
  - name: Install Java_JDK
